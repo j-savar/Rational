@@ -56,7 +56,7 @@ public class Rational {
 
     public Rational mul(Rational r) {
         int newNumerator = this.numerator * r.numerator;
-        int newDenominator = this.denominator * r.numerator;
+        int newDenominator = this.denominator * r.denominator;
         return new Rational(newNumerator, newDenominator);
     }
 
@@ -64,7 +64,7 @@ public class Rational {
         if (r.numerator == 0) {
             throw new ArithmeticException("Division by zero");
         }
-        int newNumerator = this.numerator * r.numerator;
+        int newNumerator = this.numerator * r.denominator;
         int newDenominator = this.denominator * r.numerator;
         return new Rational(newNumerator, newDenominator);
     }
